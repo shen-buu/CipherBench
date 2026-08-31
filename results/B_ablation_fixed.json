@@ -1,0 +1,26 @@
+{
+  "full": {
+    "variant": "full",
+    "accuracy": 0.4845333333333333,
+    "macro_f1": 0.4780370198083111,
+    "source": "main_multichannel_42"
+  },
+  "no_fft": {
+    "variant": "no_fft",
+    "accuracy": 0.47346666666666665,
+    "macro_f1": 0.45802207547297075,
+    "macro_p": 0.4911146006539212,
+    "macro_r": 0.47346666666666665,
+    "best_epoch": 50,
+    "delta_pp": -1.11
+  },
+  "no_diff": {
+    "variant": "no_diff",
+    "accuracy": 0.478,
+    "macro_f1": 0.4657032896096942,
+    "macro_p": 0.518372209085035,
+    "macro_r": 0.478,
+    "best_epoch": 25,
+    "delta_pp": -0.65
+  }
+}

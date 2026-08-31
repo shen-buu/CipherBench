@@ -1,0 +1,302 @@
+{
+  "english_text": {
+    "frequency_pass_rate": 0.02,
+    "runs_pass_rate": 0.0,
+    "class_id": 0,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "chinese_text": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 1,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "python_code": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 2,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "c_cpp_code": {
+    "frequency_pass_rate": 0.02,
+    "runs_pass_rate": 0.0,
+    "class_id": 3,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "json_data": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 4,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "xml_html": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 5,
+    "category": "\u660e\u6587\u6587\u672c"
+  },
+  "base64": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 6,
+    "category": "\u7f16\u7801"
+  },
+  "hex_base16": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.06,
+    "class_id": 7,
+    "category": "\u7f16\u7801"
+  },
+  "base32": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 8,
+    "category": "\u7f16\u7801"
+  },
+  "url_encode": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 9,
+    "category": "\u7f16\u7801"
+  },
+  "quoted_printable": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 10,
+    "category": "\u7f16\u7801"
+  },
+  "md5_hex": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 11,
+    "category": "\u54c8\u5e0c"
+  },
+  "sha1_hex": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 12,
+    "category": "\u54c8\u5e0c"
+  },
+  "sha256_hex": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 13,
+    "category": "\u54c8\u5e0c"
+  },
+  "gzip_deflate_l9": {
+    "frequency_pass_rate": 0.28,
+    "runs_pass_rate": 0.26,
+    "class_id": 14,
+    "category": "\u538b\u7f29"
+  },
+  "zip_deflate_l9": {
+    "frequency_pass_rate": 0.28,
+    "runs_pass_rate": 0.3,
+    "class_id": 15,
+    "category": "\u538b\u7f29"
+  },
+  "7z_lzma2_l9": {
+    "frequency_pass_rate": 0.38,
+    "runs_pass_rate": 0.36,
+    "class_id": 16,
+    "category": "\u538b\u7f29"
+  },
+  "bzip2_l9": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.04,
+    "class_id": 17,
+    "category": "\u538b\u7f29"
+  },
+  "xz_lzma_l9": {
+    "frequency_pass_rate": 0.34,
+    "runs_pass_rate": 0.32,
+    "class_id": 18,
+    "category": "\u538b\u7f29"
+  },
+  "zstd_l19": {
+    "frequency_pass_rate": 0.18,
+    "runs_pass_rate": 0.24,
+    "class_id": 19,
+    "category": "\u538b\u7f29"
+  },
+  "lz4_fast": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 20,
+    "category": "\u538b\u7f29"
+  },
+  "brotli_l11": {
+    "frequency_pass_rate": 0.32,
+    "runs_pass_rate": 0.36,
+    "class_id": 21,
+    "category": "\u538b\u7f29"
+  },
+  "aes128_cbc": {
+    "frequency_pass_rate": 0.58,
+    "runs_pass_rate": 0.56,
+    "class_id": 22,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes128_gcm": {
+    "frequency_pass_rate": 0.62,
+    "runs_pass_rate": 0.62,
+    "class_id": 23,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes128_ctr": {
+    "frequency_pass_rate": 0.6,
+    "runs_pass_rate": 0.58,
+    "class_id": 24,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes192_cbc": {
+    "frequency_pass_rate": 0.58,
+    "runs_pass_rate": 0.62,
+    "class_id": 25,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes192_gcm": {
+    "frequency_pass_rate": 0.62,
+    "runs_pass_rate": 0.62,
+    "class_id": 26,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes256_cbc": {
+    "frequency_pass_rate": 0.58,
+    "runs_pass_rate": 0.58,
+    "class_id": 27,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes256_gcm": {
+    "frequency_pass_rate": 0.5,
+    "runs_pass_rate": 0.54,
+    "class_id": 28,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aes256_ctr": {
+    "frequency_pass_rate": 0.54,
+    "runs_pass_rate": 0.56,
+    "class_id": 29,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "camellia256_cbc": {
+    "frequency_pass_rate": 0.58,
+    "runs_pass_rate": 0.58,
+    "class_id": 30,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "chacha20_poly1305": {
+    "frequency_pass_rate": 0.54,
+    "runs_pass_rate": 0.54,
+    "class_id": 31,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "rc4": {
+    "frequency_pass_rate": 0.46,
+    "runs_pass_rate": 0.46,
+    "class_id": 32,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "3des_ede3_cbc": {
+    "frequency_pass_rate": 0.56,
+    "runs_pass_rate": 0.56,
+    "class_id": 33,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "blowfish_cbc": {
+    "frequency_pass_rate": 0.5,
+    "runs_pass_rate": 0.48,
+    "class_id": 34,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "twofish_cbc": {
+    "frequency_pass_rate": 0.64,
+    "runs_pass_rate": 0.62,
+    "class_id": 35,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "sm4_cbc": {
+    "frequency_pass_rate": 0.62,
+    "runs_pass_rate": 0.62,
+    "class_id": 36,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "sm4_ctr": {
+    "frequency_pass_rate": 0.56,
+    "runs_pass_rate": 0.58,
+    "class_id": 37,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "aria256_cbc": {
+    "frequency_pass_rate": 0.6,
+    "runs_pass_rate": 0.62,
+    "class_id": 38,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "seed_cbc": {
+    "frequency_pass_rate": 0.5,
+    "runs_pass_rate": 0.52,
+    "class_id": 39,
+    "category": "\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "rsa_1024": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 40,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "rsa_2048": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 41,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "rsa_4096": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 42,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "gpg_mixed": {
+    "frequency_pass_rate": 0.7,
+    "runs_pass_rate": 0.7,
+    "class_id": 43,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "ecc_secp256r1": {
+    "frequency_pass_rate": 0.68,
+    "runs_pass_rate": 0.68,
+    "class_id": 44,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "sm2_enc": {
+    "frequency_pass_rate": 0.56,
+    "runs_pass_rate": 0.56,
+    "class_id": 45,
+    "category": "\u975e\u5bf9\u79f0\u52a0\u5bc6"
+  },
+  "dev_urandom": {
+    "frequency_pass_rate": 0.98,
+    "runs_pass_rate": 1.0,
+    "class_id": 46,
+    "category": "\u771f\u968f\u673a/\u5bf9\u7167"
+  },
+  "python_secrets": {
+    "frequency_pass_rate": 0.98,
+    "runs_pass_rate": 0.98,
+    "class_id": 47,
+    "category": "\u771f\u968f\u673a/\u5bf9\u7167"
+  },
+  "aes_ecb_zero_plaintext": {
+    "frequency_pass_rate": 0.24,
+    "runs_pass_rate": 0.02,
+    "class_id": 48,
+    "category": "\u771f\u968f\u673a/\u5bf9\u7167"
+  },
+  "all_zeros": {
+    "frequency_pass_rate": 0.0,
+    "runs_pass_rate": 0.0,
+    "class_id": 49,
+    "category": "\u771f\u968f\u673a/\u5bf9\u7167"
+  }
+}

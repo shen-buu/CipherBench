@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use CipherBench in your research, please cite the following paper."
+title: "CipherBench: A Fine-Grained Benchmark Dataset for Algorithm-Level Fragmented Payload Identification"
+authors:
+  - family-names: Shen
+    given-names: Jinhui
+  - family-names: Liu
+    given-names: Kai
+  - family-names: Zhao
+    given-names: Mengnan
+  - family-names: Yue
+    given-names: Ziye
+  - family-names: Mao
+    given-names: Jiaqi
+  - family-names: Li
+    given-names: Xiaofeng
+journal: "Applied Sciences"
+year: 2026
+identifiers:
+  - type: other
+    value: "applsci-4493649"
+    description: "Manuscript ID (MDPI Applied Sciences)"
+license: "MIT (code) / CC-BY-4.0 (data)"
+repository-code: "https://github.com/shen-buu/CipherBench"
+keywords:
+  - benchmark dataset
+  - algorithm identification
+  - fragmented payload
+  - encrypted traffic
+  - SM4
+  - SM2
+  - digital forensics

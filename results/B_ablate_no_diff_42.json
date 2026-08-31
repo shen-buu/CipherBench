@@ -1,0 +1,7 @@
+{
+  "variant": "no_diff",
+  "seed": 42,
+  "test_acc": 0.5157333333333334,
+  "test_macro_f1": 0.50915417266453,
+  "best_epoch": 25
+}

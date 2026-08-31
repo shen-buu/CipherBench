@@ -1,0 +1,131 @@
+{
+  "A_headless_train": {
+    "overall": 0.5241666666666667,
+    "with_hdr": 0.995,
+    "stripped": 0.8525,
+    "per_format": {
+      "gzip_deflate_l9": {
+        "all_acc": 0.64,
+        "with_hdr_acc": 0.9791666666666666,
+        "stripped_acc": 0.8854166666666666,
+        "n": 150,
+        "n_with": 96
+      },
+      "zip_deflate_l9": {
+        "all_acc": 0.7266666666666667,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 1.0,
+        "n": 150,
+        "n_with": 104
+      },
+      "7z_lzma2_l9": {
+        "all_acc": 0.6533333333333333,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 1.0,
+        "n": 150,
+        "n_with": 94
+      },
+      "bzip2_l9": {
+        "all_acc": 0.09333333333333334,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "xz_lzma_l9": {
+        "all_acc": 0.6333333333333333,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "zstd_l19": {
+        "all_acc": 0.76,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 0.5471698113207547,
+        "n": 150,
+        "n_with": 106
+      },
+      "lz4_fast": {
+        "all_acc": 0.0,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "brotli_l11": {
+        "all_acc": 0.6866666666666666,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      }
+    }
+  },
+  "B_no_headless_train": {
+    "overall": 0.6308333333333334,
+    "with_hdr": 0.9975,
+    "stripped": 0.8,
+    "per_format": {
+      "gzip_deflate_l9": {
+        "all_acc": 0.6333333333333333,
+        "with_hdr_acc": 0.9895833333333334,
+        "stripped_acc": 0.9895833333333334,
+        "n": 150,
+        "n_with": 96
+      },
+      "zip_deflate_l9": {
+        "all_acc": 0.7466666666666667,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 0.9230769230769231,
+        "n": 150,
+        "n_with": 104
+      },
+      "7z_lzma2_l9": {
+        "all_acc": 0.6533333333333333,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 1.0,
+        "n": 150,
+        "n_with": 94
+      },
+      "bzip2_l9": {
+        "all_acc": 0.7333333333333333,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "xz_lzma_l9": {
+        "all_acc": 0.6333333333333333,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "zstd_l19": {
+        "all_acc": 0.8133333333333334,
+        "with_hdr_acc": 1.0,
+        "stripped_acc": 0.330188679245283,
+        "n": 150,
+        "n_with": 106
+      },
+      "lz4_fast": {
+        "all_acc": 0.16,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      },
+      "brotli_l11": {
+        "all_acc": 0.6733333333333333,
+        "with_hdr_acc": null,
+        "stripped_acc": null,
+        "n": 150,
+        "n_with": 0
+      }
+    }
+  },
+  "delta_all_pp": 10.666666666666668,
+  "delta_stripped_pp": -5.249999999999999,
+  "note": "\u534f\u8bae\uff1atrain p=0.5(A)/0.0(B)\uff0cval+test\u4fdd\u7559\u5b8c\u6574\u5934"
+}

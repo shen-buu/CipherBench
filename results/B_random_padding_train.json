@@ -1,0 +1,91 @@
+{
+  "train": "random-padded zero regions (per-sample CSPRNG bytes)",
+  "zero_pad_test_acc": 0.1855,
+  "zero_pad_test_f1": 0.1664,
+  "rand_pad_test_acc": 0.4231,
+  "rand_pad_test_f1": 0.406,
+  "best_epoch": 28,
+  "per_category": {
+    "\u660e\u6587\u6587\u672c": {
+      "zero_pad_test": 38.11,
+      "rand_pad_test": 67.89
+    },
+    "\u7f16\u7801": {
+      "zero_pad_test": 71.73,
+      "rand_pad_test": 99.07
+    },
+    "\u54c8\u5e0c": {
+      "zero_pad_test": 0.0,
+      "rand_pad_test": 100.0
+    },
+    "\u538b\u7f29": {
+      "zero_pad_test": 14.67,
+      "rand_pad_test": 74.08
+    },
+    "\u5bf9\u79f0\u52a0\u5bc6": {
+      "zero_pad_test": 0.37,
+      "rand_pad_test": 0.41
+    },
+    "\u975e\u5bf9\u79f0\u52a0\u5bc6": {
+      "zero_pad_test": 2.67,
+      "rand_pad_test": 18.78
+    },
+    "\u771f\u968f\u673a/\u5bf9\u7167": {
+      "zero_pad_test": 50.0,
+      "rand_pad_test": 50.0
+    }
+  },
+  "per_class_rand_pad_test": {
+    "english_text": 31.33,
+    "chinese_text": 100.0,
+    "python_code": 51.33,
+    "c_cpp_code": 56.0,
+    "json_data": 85.33,
+    "xml_html": 83.33,
+    "base64": 100.0,
+    "hex_base16": 100.0,
+    "base32": 100.0,
+    "url_encode": 100.0,
+    "quoted_printable": 95.33,
+    "md5_hex": 100.0,
+    "sha1_hex": 100.0,
+    "sha256_hex": 100.0,
+    "gzip_deflate_l9": 64.0,
+    "zip_deflate_l9": 73.33,
+    "7z_lzma2_l9": 63.33,
+    "bzip2_l9": 84.67,
+    "xz_lzma_l9": 64.0,
+    "zstd_l19": 76.67,
+    "lz4_fast": 99.33,
+    "brotli_l11": 67.33,
+    "aes128_cbc": 0.0,
+    "aes128_gcm": 6.0,
+    "aes128_ctr": 0.0,
+    "aes192_cbc": 0.0,
+    "aes192_gcm": 0.67,
+    "aes256_cbc": 0.0,
+    "aes256_gcm": 0.0,
+    "aes256_ctr": 0.0,
+    "camellia256_cbc": 0.0,
+    "chacha20_poly1305": 0.0,
+    "rc4": 0.0,
+    "3des_ede3_cbc": 0.0,
+    "blowfish_cbc": 0.0,
+    "twofish_cbc": 0.0,
+    "sm4_cbc": 0.0,
+    "sm4_ctr": 0.0,
+    "aria256_cbc": 0.67,
+    "seed_cbc": 0.0,
+    "rsa_1024": 0.0,
+    "rsa_2048": 0.67,
+    "rsa_4096": 78.67,
+    "gpg_mixed": 0.0,
+    "ecc_secp256r1": 4.0,
+    "sm2_enc": 29.33,
+    "dev_urandom": 0.0,
+    "python_secrets": 0.0,
+    "aes_ecb_zero_plaintext": 100.0,
+    "all_zeros": 100.0
+  },
+  "note": "\u8bad\u7ec3\u65f6\u96f6\u586b\u5145\u533a\u66ff\u6362\u4e3a\u968f\u673a\u5b57\u8282\uff1b\u4e0e\u4e3b\u5b9e\u9a8c\u8bc4\u4f30\u4fa7\u63a2\u9488\u5bf9\u7167"
+}

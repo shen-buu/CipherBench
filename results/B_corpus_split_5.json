@@ -1,0 +1,9 @@
+{
+  "model": "multichannel",
+  "seed": 42,
+  "corpus_split_seed": 5,
+  "test_acc": 0.5192,
+  "test_macro_f1": 0.5121472561837552,
+  "best_epoch": 33,
+  "best_val_acc": 0.5173333333333333
+}

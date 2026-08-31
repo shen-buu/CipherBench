@@ -1,0 +1,76 @@
+{
+  "overall_zero": 0.4845333333333333,
+  "overall_rand": 0.212,
+  "per_category": {
+    "\u660e\u6587\u6587\u672c": {
+      "zero_pad_acc": 0.7033333333333334,
+      "rand_pad_acc": 0.25555555555555554
+    },
+    "\u7f16\u7801": {
+      "zero_pad_acc": 0.9946666666666667,
+      "rand_pad_acc": 0.6213333333333333
+    },
+    "\u54c8\u5e0c": {
+      "zero_pad_acc": 1.0,
+      "rand_pad_acc": 0.0
+    },
+    "\u538b\u7f29": {
+      "zero_pad_acc": 0.5241666666666667,
+      "rand_pad_acc": 0.37666666666666665
+    },
+    "\u5bf9\u79f0\u52a0\u5bc6": {
+      "zero_pad_acc": 0.05296296296296296,
+      "rand_pad_acc": 0.0
+    },
+    "\u975e\u5bf9\u79f0\u52a0\u5bc6": {
+      "zero_pad_acc": 0.6588888888888889,
+      "rand_pad_acc": 0.0022222222222222222
+    },
+    "\u771f\u968f\u673a/\u5bf9\u7167": {
+      "zero_pad_acc": 0.7333333333333333,
+      "rand_pad_acc": 0.7333333333333333
+    }
+  },
+  "per_class": {
+    "rsa_1024": {
+      "zero": 1.0,
+      "rand": 0.0
+    },
+    "rsa_2048": {
+      "zero": 0.9933333333333333,
+      "rand": 0.0
+    },
+    "rsa_4096": {
+      "zero": 0.96,
+      "rand": 0.0
+    },
+    "gpg_mixed": {
+      "zero": 0.32,
+      "rand": 0.0
+    },
+    "ecc_secp256r1": {
+      "zero": 0.3333333333333333,
+      "rand": 0.013333333333333334
+    },
+    "sm2_enc": {
+      "zero": 0.3466666666666667,
+      "rand": 0.0
+    },
+    "dev_urandom": {
+      "zero": 0.03333333333333333,
+      "rand": 0.03333333333333333
+    },
+    "python_secrets": {
+      "zero": 0.9,
+      "rand": 0.9
+    },
+    "aes_ecb_zero_plaintext": {
+      "zero": 1.0,
+      "rand": 1.0
+    },
+    "sm4_cbc": {
+      "zero": 0.0,
+      "rand": 0.0
+    }
+  }
+}

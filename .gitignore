@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.log
+*.aux
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pt
+*.pkl
+*.tar.gz
+*.zip
+data/cache/
+.DS_Store

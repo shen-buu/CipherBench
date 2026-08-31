@@ -1,0 +1,27 @@
+# CipherBench 02_Code_Main 依赖清单
+# 环境：Python >= 3.10（已在 3.11.10 / 3.13.7 验证）
+numpy>=1.26
+torch>=2.1
+scikit-learn>=1.3
+tqdm>=4.66
+
+# 加密算法库（对称/非对称）
+cryptography>=41.0
+gmssl==3.2.2
+pysmx>=1.0.0          # SM2（snowland-smx，C1C3C2 输出格式）
+pycryptodomex>=3.23   # 部分算法的独立交叉实现
+
+# 压缩库
+lz4>=4.3              # lz4.block（store_size=False，无 frame 魔数）
+brotli>=1.1
+zstandard>=0.22       # zstd
+
+# Twofish（PyPI C 扩展；若平台无编译器，可 pip 安装预编译 wheel：
+#   pip install twofish）
+twofish>=0.3
+
+# 说明
+# - 生成 SM4 需 gmssl 3.2.2；SM4-CBC 手工 CBC 链接使用其无填充单分组原语
+#   （gmssl.SM4().one_round），不要直接使用 CryptSM4.crypt_ecb（隐式 PKCS#7）。
+# - bz2 使用标准库 bz2.BZ2Compressor(9)（位置参数；Py3.11/3.13 关键字调用会报错）。
+# - gzip 输出固定 mtime=0 以保证逐字节可复现。
