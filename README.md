@@ -4,7 +4,7 @@
 
 CipherBench is a benchmark dataset for identifying the *algorithm* that produced a raw, fragmented byte payload: 50 algorithm-level classes across 7 categories (plaintext, encoding, hash digests, compression, symmetric encryption, asymmetric encryption, and random/control), 50,000 samples in total, where every sample is a random-offset 1,024-byte window with zero padding that simulates TCP-style payload fragmentation.
 
-> **Status:** this repository is kept **private during peer review** and will be made public upon paper acceptance. Review copies of the data and checkpoints are available from the authors on request.
+> **Published**: Shen, J.; Liu, K.; Zhao, M.; Yue, Z.; Mao, J.; Li, X. *CipherBench: A Fine-Grained Benchmark Dataset for Algorithm-Level Fragmented Payload Identification*. Appl. Sci. **2026**, *16*(17), 8763. https://doi.org/10.3390/app16178763 — paper: https://www.mdpi.com/2076-3417/16/17/8763
 
 ## Highlights
 
@@ -71,8 +71,11 @@ The `results/` directory contains the JSON files behind every table and figure o
   title = {CipherBench: A Fine-Grained Benchmark Dataset for Algorithm-Level Fragmented Payload Identification},
   author = {Shen, Jinhui and Liu, Kai and Zhao, Mengnan and Yue, Ziye and Mao, Jiaqi and Li, Xiaofeng},
   journal = {Applied Sciences},
+  volume = {16},
+  number = {17},
+  pages = {8763},
   year = {2026},
-  note = {(publication details to be added upon acceptance)}
+  doi = {10.3390/app16178763}
 }
 ```
 
@@ -83,4 +86,4 @@ The `results/` directory contains the JSON files behind every table and figure o
 
 ## Data availability
 
-The corrected dataset cache (~80 MB) and the trained model checkpoints are distributed as **GitHub Release assets** of this repository. During peer review the repository is private; access is granted to reviewers and editors on request (see the Data Availability statement of the manuscript).
+The corrected dataset cache (~80 MB) and the trained model checkpoints are distributed as **GitHub Release assets** of this repository.
