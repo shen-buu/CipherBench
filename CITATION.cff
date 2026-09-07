@@ -15,13 +15,14 @@ authors:
   - family-names: Li
     given-names: Xiaofeng
 journal: "Applied Sciences"
+volume: 16
+issue: 17
+pages: 8763
 year: 2026
-identifiers:
-  - type: other
-    value: "applsci-4493649"
-    description: "Manuscript ID (MDPI Applied Sciences)"
+doi: 10.3390/app16178763
 license: "MIT (code) / CC-BY-4.0 (data)"
 repository-code: "https://github.com/shen-buu/CipherBench"
+url: "https://www.mdpi.com/2076-3417/16/17/8763"
 keywords:
   - benchmark dataset
   - algorithm identification
