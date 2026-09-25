@@ -1,0 +1,32 @@
+{
+ "protocol": "tls_records v3 (in-process ssl.MemoryBIO)",
+ "cipher": "TLS_AES_256_GCM_SHA384 (default preference; negotiated and asserted per session)",
+ "env": {
+  "openssl": "OpenSSL 3.5.3 16 Sep 2025",
+  "record_policy": "max plaintext 2^14=16384; +22B/record (5 header+1 inner+16 tag)",
+  "session": "real TLS 1.3 handshake per class, per-object write"
+ },
+ "feature": "(n_records, len1, len2)",
+ "seeds": [
+  7,
+  42,
+  99,
+  123,
+  2024
+ ],
+ "macro_f1": 0.9261764632351103,
+ "std": 0.0,
+ "SE": 0.0,
+ "per_seed": {
+  "7": 0.9261764632351103,
+  "42": 0.9261764632351103,
+  "99": 0.9261764632351103,
+  "123": 0.9261764632351103,
+  "2024": 0.9261764632351103
+ },
+ "synthetic_reference": {
+  "none": 0.9262,
+  "rand255": 0.5766,
+  "rand1024": 0.3173
+ }
+}

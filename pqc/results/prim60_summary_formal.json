@@ -1,0 +1,310 @@
+{
+  "protocol": "prim60_summary v1",
+  "seeds": [
+    7,
+    42,
+    99,
+    123,
+    2024
+  ],
+  "scenes": {
+    "p1": {
+      "macro": {
+        "mean": 0.05474305486171364,
+        "sd": 0.005425696721889473,
+        "se": 0.0024264453390885265
+      },
+      "z_vs_null_band": -2.0,
+      "non_ecdsa_15_mean": {
+        "mean": 0.04860652118080415,
+        "sd": 0.004477144229766557,
+        "vs_chance": -0.0139
+      },
+      "ecdsa_f1": {
+        "mean": 0.14679106007535578,
+        "sd": 0.044993527472100926
+      },
+      "max_non_ecdsa_class": {
+        "mldsa44_sig": 0.0956
+      },
+      "non_ecdsa_escapes_above_chance": [
+        [
+          "mldsa44_sig",
+          0.0956
+        ],
+        [
+          "ed25519_sig",
+          0.0731
+        ],
+        [
+          "slhdsa_128f",
+          0.0706
+        ],
+        [
+          "mlkem1024_ct",
+          0.0674
+        ]
+      ],
+      "seed_stable_escapes_zse": [
+        [
+          "mldsa44_sig",
+          3.5
+        ]
+      ],
+      "per_class_mean": {
+        "aes256gcm_ct_768": 0.039205833407129353,
+        "aes256gcm_ct_784": 0.04905231593324248,
+        "ecdsa_p256_sig": 0.14679106007535578,
+        "ed25519_sig": 0.0731415737579382,
+        "mldsa44_sig": 0.09561399927223335,
+        "mldsa65_sig": 0.04430798758126646,
+        "mldsa87_sig": 0.04164712430400099,
+        "mlkem1024_ct": 0.0673623727280473,
+        "mlkem512_ct": 0.03294968606517453,
+        "mlkem768_ct": 0.04915065749336008,
+        "rsa2048_ct": 0.029119657770843337,
+        "slhdsa_128f": 0.07059977384254149,
+        "slhdsa_128s": 0.037522080553036144,
+        "slhdsa_192s": 0.03707260972274027,
+        "slhdsa_256s": 0.0371782737176732,
+        "urandom_768": 0.02517387156283511
+      },
+      "per_class_sd": {
+        "aes256gcm_ct_768": 0.011506781734949047,
+        "aes256gcm_ct_784": 0.03363589929240853,
+        "ecdsa_p256_sig": 0.044993527472100926,
+        "ed25519_sig": 0.013555557710404767,
+        "mldsa44_sig": 0.02126404444398215,
+        "mldsa65_sig": 0.02972860207746341,
+        "mldsa87_sig": 0.036780389020152696,
+        "mlkem1024_ct": 0.03215291740146687,
+        "mlkem512_ct": 0.028423380081022832,
+        "mlkem768_ct": 0.02117835389279231,
+        "rsa2048_ct": 0.027782298534143973,
+        "slhdsa_128f": 0.03909700724696797,
+        "slhdsa_128s": 0.030789702324190264,
+        "slhdsa_192s": 0.02542896468094591,
+        "slhdsa_256s": 0.016823411825879056,
+        "urandom_768": 0.025246739810076232
+      },
+      "per_class_se": {
+        "aes256gcm_ct_768": 0.005145989232319807,
+        "aes256gcm_ct_784": 0.01504243146043251,
+        "ecdsa_p256_sig": 0.020121717195024386,
+        "ed25519_sig": 0.006062229702677294,
+        "mldsa44_sig": 0.00950956977066416,
+        "mldsa65_sig": 0.01329503502424993,
+        "mldsa87_sig": 0.01644869001758966,
+        "mlkem1024_ct": 0.014379221796923162,
+        "mlkem512_ct": 0.012711322002296107,
+        "mlkem768_ct": 0.00947124779116618,
+        "rsa2048_ct": 0.012424621618707736,
+        "slhdsa_128f": 0.017484713184204456,
+        "slhdsa_128s": 0.013769573480774538,
+        "slhdsa_192s": 0.01137217872480726,
+        "slhdsa_256s": 0.007523658491227885,
+        "urandom_768": 0.011290685285116116
+      }
+    },
+    "p2": {
+      "macro": {
+        "mean": 0.10556315741912767,
+        "sd": 0.004008354989823289,
+        "se": 0.0017925908470390703
+      },
+      "z_vs_null_band": 10.1,
+      "non_ecdsa_15_mean": {
+        "mean": 0.04783205424366209,
+        "sd": 0.004200300937225196,
+        "vs_chance": -0.0147
+      },
+      "ecdsa_f1": {
+        "mean": 0.9715297050511111,
+        "sd": 0.005133808303471449
+      },
+      "max_non_ecdsa_class": {
+        "rsa2048_ct": 0.1233
+      },
+      "non_ecdsa_escapes_above_chance": [
+        [
+          "rsa2048_ct",
+          0.1233
+        ],
+        [
+          "ed25519_sig",
+          0.0906
+        ],
+        [
+          "mlkem1024_ct",
+          0.0779
+        ],
+        [
+          "mldsa65_sig",
+          0.0653
+        ]
+      ],
+      "seed_stable_escapes_zse": [
+        [
+          "rsa2048_ct",
+          7.5
+        ]
+      ],
+      "per_class_mean": {
+        "aes256gcm_ct_768": 0.022843894045968788,
+        "aes256gcm_ct_784": 0.024121527771155872,
+        "ecdsa_p256_sig": 0.9715297050511111,
+        "ed25519_sig": 0.09057256250522916,
+        "mldsa44_sig": 0.031194473763027197,
+        "mldsa65_sig": 0.0653370777730365,
+        "mldsa87_sig": 0.04761186226827714,
+        "mlkem1024_ct": 0.07791474374802912,
+        "mlkem512_ct": 0.03285913562924121,
+        "mlkem768_ct": 0.0294194804990063,
+        "rsa2048_ct": 0.1232569977856588,
+        "slhdsa_128f": 0.041987345496254276,
+        "slhdsa_128s": 0.051662953307260354,
+        "slhdsa_192s": 0.022844319775596072,
+        "slhdsa_256s": 0.021818270230793895,
+        "urandom_768": 0.034036169056396844
+      },
+      "per_class_sd": {
+        "aes256gcm_ct_768": 0.014251936573807524,
+        "aes256gcm_ct_784": 0.023301926275907377,
+        "ecdsa_p256_sig": 0.005133808303471449,
+        "ed25519_sig": 0.031549490356299156,
+        "mldsa44_sig": 0.03979299336637325,
+        "mldsa65_sig": 0.03446895738008875,
+        "mldsa87_sig": 0.03956410196665615,
+        "mlkem1024_ct": 0.02784478175819805,
+        "mlkem512_ct": 0.028781336813947456,
+        "mlkem768_ct": 0.026247318452387907,
+        "rsa2048_ct": 0.018199370338614716,
+        "slhdsa_128f": 0.03411722386244318,
+        "slhdsa_128s": 0.03406796945709237,
+        "slhdsa_192s": 0.02819370788177587,
+        "slhdsa_256s": 0.022288654881586267,
+        "urandom_768": 0.022739348746596035
+      },
+      "per_class_se": {
+        "aes256gcm_ct_768": 0.006373659798009814,
+        "aes256gcm_ct_784": 0.010420938231923483,
+        "ecdsa_p256_sig": 0.0022959088700030056,
+        "ed25519_sig": 0.014109361018431793,
+        "mldsa44_sig": 0.017795967639081756,
+        "mldsa65_sig": 0.015414986363084297,
+        "mldsa87_sig": 0.017693604293235254,
+        "mlkem1024_ct": 0.012452564965995389,
+        "mlkem512_ct": 0.012871405119860745,
+        "mlkem768_ct": 0.011738157657324787,
+        "rsa2048_ct": 0.008139005844967174,
+        "slhdsa_128f": 0.015257686352000177,
+        "slhdsa_128s": 0.015235659112289027,
+        "slhdsa_192s": 0.012608609472284489,
+        "slhdsa_256s": 0.009967789488451883,
+        "urandom_768": 0.010169345912292673
+      }
+    }
+  },
+  "frozen_null": {
+    "mean": 0.063,
+    "std": 0.0042,
+    "ref": "prim P1 permutation null (S0 cell, rf; Table 4/\u00a75.2)"
+  },
+  "chance": 0.0625,
+  "env_check": [
+    {
+      "file": "cnn_p1_seed7_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p1_seed42_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p1_seed99_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p1_seed123_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p1_seed2024_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p2_seed7_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p2_seed42_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p2_seed99_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p2_seed123_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    },
+    {
+      "file": "cnn_p2_seed2024_g_prim_e60.json",
+      "torch": "2.9.1+cu128",
+      "device": "Tesla V100-SXM2-16GB",
+      "match_torch": true,
+      "match_device": true
+    }
+  ],
+  "env": {
+    "script": "exp_prim60_analysis.py",
+    "python": "3.13.7",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.17.0-41-generic-x86_64-with-glibc2.42",
+    "date": "2026-09-25",
+    "expected_env": {
+      "torch": "2.9.1+cu128",
+      "device_prefix": "Tesla V100"
+    },
+    "seeds": [
+      7,
+      42,
+      99,
+      123,
+      2024
+    ],
+    "30ep_reference": {
+      "P2 ECDSA": 0.9455,
+      "P2 non-ECDSA mean": 0.036,
+      "P1 overall": 0.0295,
+      "ref": "\u00a74.4 point 2 (frozen)"
+    }
+  }
+}

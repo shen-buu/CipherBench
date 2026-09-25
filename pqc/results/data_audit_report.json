@@ -1,0 +1,141 @@
+{
+ "protocol": "data_audit v1",
+ "n_flags": 21,
+ "flags": [
+  {
+   "layer": "L3",
+   "id": "att-rf-15",
+   "msg": "slide50 rf 15-class: got 0.070046 want 0.075400 (\u0394=-0.005354)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p1 seed42: 0.0352 vs others 0.0203\u00b10.0017 (8.7\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p1_e30 seed99: 0.0173 vs others 0.0232\u00b10.0016 (3.8\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p1_e60 seed2024: 0.0323 vs others 0.0198\u00b10.0033 (3.8\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p2_e60 seed7: 0.0259 vs others 0.0384\u00b10.0039 (3.2\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p2_g_crt seed99: 0.0885 vs others 0.0594\u00b10.0072 (4.1\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p2_g_crt_e30 seed2024: 0.0698 vs others 0.1060\u00b10.0118 (3.1\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "bilstm_p2_g_prim_e30 seed2024: 0.0648 vs others 0.0486\u00b10.0049 (3.3\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p1_e30 seed42: 0.2944 vs others 0.2804\u00b10.0040 (3.5\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p1_e60 seed42: 0.3261 vs others 0.3160\u00b10.0022 (4.6\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p1_g_prim_e30 seed99: 0.0152 vs others 0.0330\u00b10.0046 (3.9\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p2_g_crt seed7: 0.2760 vs others 0.5988\u00b10.0791 (4.1\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p2_g_crt_e30 seed99: 0.8950 vs others 0.7855\u00b10.0251 (4.4\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "cnn_p2_g_prim_e30 seed7: 0.0797 vs others 0.0948\u00b10.0042 (3.6\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "hgb_p1 seed99: 0.2834 vs others 0.2920\u00b10.0023 (3.8\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "rf_p1_g_prim seed7: 0.0759 vs others 0.0740\u00b10.0004 (4.4\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "rf_p2_g_pk8 seed99: 0.6873 vs others 0.6973\u00b10.0029 (3.5\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "s1_slide25 seed99: 0.8821 vs others 0.8868\u00b10.0015 (3.2\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "s1_slide50 seed123: 0.6094 vs others 0.6134\u00b10.0009 (4.5\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "s1_trunc50 seed123: 0.3882 vs others 0.3818\u00b10.0015 (4.2\u03c3)",
+   "detail": null
+  },
+  {
+   "layer": "L4",
+   "id": "seed_outlier",
+   "msg": "s1_trunc75 seed7: 0.3085 vs others 0.3153\u00b10.0013 (5.3\u03c3)",
+   "detail": null
+  }
+ ],
+ "n_files_scanned": 260,
+ "env": {
+  "script": "exp_data_audit.py",
+  "python": "3.13.7",
+  "numpy": "2.5.2",
+  "date": "2026-09-25",
+  "read_only": true,
+  "frozen_files_modified": false
+ }
+}

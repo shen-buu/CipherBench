@@ -1,0 +1,104 @@
+{
+  "classes": [
+    "aes256gcm_ct_768",
+    "aes256gcm_ct_784",
+    "ecdsa_p256_sig",
+    "ecdsap256_cert",
+    "ecdsap256_pkcs8",
+    "ed25519_cert",
+    "ed25519_pkcs8",
+    "ed25519_sig",
+    "mldsa44_cert",
+    "mldsa44_pkcs8",
+    "mldsa44_sig",
+    "mldsa65_cert",
+    "mldsa65_pkcs8",
+    "mldsa65_sig",
+    "mldsa87_cert",
+    "mldsa87_pkcs8",
+    "mldsa87_sig",
+    "mlkem1024_ct",
+    "mlkem1024_pkcs8",
+    "mlkem512_ct",
+    "mlkem512_pkcs8",
+    "mlkem768_ct",
+    "mlkem768_pkcs8",
+    "rsa2048_cert",
+    "rsa2048_ct",
+    "rsa2048_pkcs8",
+    "slhdsa128s_cert",
+    "slhdsa128s_pkcs8",
+    "slhdsa256s_pkcs8",
+    "slhdsa_128f",
+    "slhdsa_128s",
+    "slhdsa_192s",
+    "slhdsa_256s",
+    "urandom_768"
+  ],
+  "n_classes": 34,
+  "s2": {
+    "inner": {
+      "f1": 0.9261764632351103,
+      "std": 0.0
+    },
+    "none": {
+      "f1": 0.9261764632351103,
+      "std": 0.0
+    },
+    "rand255": {
+      "f1": 0.5766285163114541,
+      "std": 0.0027708335156562585
+    },
+    "rand1024": {
+      "f1": 0.3173071681818935,
+      "std": 0.0022206958557373074
+    }
+  },
+  "s3": {
+    "exact": {
+      "beta": 0.9260430653141792,
+      "nn_f1": 0.9261764632351103,
+      "nn_std": 0.0,
+      "nn_null_mean": 0.026133534595359637,
+      "nn_null_std": 0.0019288505263477394,
+      "G": 46,
+      "max_collision_group": 3
+    },
+    "round16": {
+      "beta": 0.8824200218570194,
+      "nn_f1": 0.8480392156862745,
+      "nn_std": 0.0,
+      "nn_null_mean": 0.02611171312503006,
+      "nn_null_std": 0.0013335693142032322,
+      "G": 31,
+      "max_collision_group": 3
+    },
+    "round64": {
+      "beta": 0.7646670006156032,
+      "nn_f1": 0.7176470588235294,
+      "nn_std": 0.0,
+      "nn_null_mean": 0.025584772316883088,
+      "nn_null_std": 0.0013841675115702568,
+      "G": 26,
+      "max_collision_group": 5
+    },
+    "log2bin": {
+      "beta": 0.293840805091518,
+      "nn_f1": 0.17163865546218485,
+      "nn_std": 2.7755575615628914e-17,
+      "nn_null_mean": 0.02155068763321126,
+      "nn_null_std": 0.0021352583125702046,
+      "G": 10,
+      "max_collision_group": 7
+    },
+    "size_class": {
+      "beta": 0.14663903561904046,
+      "nn_f1": 0.046148459383753504,
+      "nn_std": 0.0,
+      "nn_null_mean": 0.016562523388663222,
+      "nn_null_std": 0.0016926053075154257,
+      "G": 5,
+      "max_collision_group": 14
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+ "protocol": "tools_baseline v1",
+ "env": {
+  "file_version": "file-5.46",
+  "magic_db": "system default",
+  "oid_baseline": "11 algorithm OIDs + container-type/format head markers"
+ },
+ "classes": [
+  "ecdsap256_cert",
+  "ecdsap256_pkcs8",
+  "ed25519_cert",
+  "ed25519_pkcs8",
+  "mldsa44_cert",
+  "mldsa44_pkcs8",
+  "mldsa65_cert",
+  "mldsa65_pkcs8",
+  "mldsa87_cert",
+  "mldsa87_pkcs8",
+  "mlkem1024_pkcs8",
+  "mlkem512_pkcs8",
+  "mlkem768_pkcs8",
+  "rsa2048_cert",
+  "rsa2048_pkcs8",
+  "slhdsa128s_cert",
+  "slhdsa128s_pkcs8",
+  "slhdsa256s_pkcs8"
+ ],
+ "conditions": {
+  "intact": {
+   "libmagic": {
+    "preds": {},
+    "raw": {
+     "Certificate, Version=3": 2100,
+     "data": 3000,
+     "DER Encoded Key Pair, 2048 bits": 299,
+     "COM executable for DOS": 1
+    },
+    "macro_f1": 0.05546280838434428,
+    "family_correct": 0.44425925925925924,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.998330550918197,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   },
+   "oid": {
+    "preds": {},
+    "macro_f1": 1.0,
+    "family_correct": 1.0,
+    "per_class_f1": {
+     "ecdsap256_cert": 1.0,
+     "ecdsap256_pkcs8": 1.0,
+     "ed25519_cert": 1.0,
+     "ed25519_pkcs8": 1.0,
+     "mldsa44_cert": 1.0,
+     "mldsa44_pkcs8": 1.0,
+     "mldsa65_cert": 1.0,
+     "mldsa65_pkcs8": 1.0,
+     "mldsa87_cert": 1.0,
+     "mldsa87_pkcs8": 1.0,
+     "mlkem1024_pkcs8": 1.0,
+     "mlkem512_pkcs8": 1.0,
+     "mlkem768_pkcs8": 1.0,
+     "rsa2048_cert": 1.0,
+     "rsa2048_pkcs8": 1.0,
+     "slhdsa128s_cert": 1.0,
+     "slhdsa128s_pkcs8": 1.0,
+     "slhdsa256s_pkcs8": 1.0
+    }
+   }
+  },
+  "oid_zero": {
+   "libmagic": {
+    "preds": {},
+    "raw": {
+     "Certificate, Version=3": 2100,
+     "data": 3000,
+     "DER Encoded Key Pair, 2048 bits": 299,
+     "COM executable for DOS": 1
+    },
+    "macro_f1": 0.05546280838434428,
+    "family_correct": 0.44425925925925924,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.998330550918197,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   },
+   "oid": {
+    "preds": {},
+    "macro_f1": 0.5,
+    "family_correct": 0.5,
+    "per_class_f1": {
+     "ecdsap256_cert": 1.0,
+     "ecdsap256_pkcs8": 1.0,
+     "ed25519_cert": 1.0,
+     "ed25519_pkcs8": 1.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 1.0,
+     "mlkem512_pkcs8": 1.0,
+     "mlkem768_pkcs8": 1.0,
+     "rsa2048_cert": 1.0,
+     "rsa2048_pkcs8": 1.0,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   }
+  },
+  "head48": {
+   "libmagic": {
+    "preds": {},
+    "raw": {
+     "data": 5400
+    },
+    "macro_f1": 0.0,
+    "family_correct": 0.0,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.0,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   },
+   "oid": {
+    "preds": {},
+    "macro_f1": 0.0,
+    "family_correct": 0.0,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.0,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   }
+  },
+  "trunc50": {
+   "libmagic": {
+    "preds": {},
+    "raw": {
+     "data": 5400
+    },
+    "macro_f1": 0.0,
+    "family_correct": 0.0,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.0,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   },
+   "oid": {
+    "preds": {},
+    "macro_f1": 0.0,
+    "family_correct": 0.0,
+    "per_class_f1": {
+     "ecdsap256_cert": 0.0,
+     "ecdsap256_pkcs8": 0.0,
+     "ed25519_cert": 0.0,
+     "ed25519_pkcs8": 0.0,
+     "mldsa44_cert": 0.0,
+     "mldsa44_pkcs8": 0.0,
+     "mldsa65_cert": 0.0,
+     "mldsa65_pkcs8": 0.0,
+     "mldsa87_cert": 0.0,
+     "mldsa87_pkcs8": 0.0,
+     "mlkem1024_pkcs8": 0.0,
+     "mlkem512_pkcs8": 0.0,
+     "mlkem768_pkcs8": 0.0,
+     "rsa2048_cert": 0.0,
+     "rsa2048_pkcs8": 0.0,
+     "slhdsa128s_cert": 0.0,
+     "slhdsa128s_pkcs8": 0.0,
+     "slhdsa256s_pkcs8": 0.0
+    }
+   }
+  }
+ }
+}

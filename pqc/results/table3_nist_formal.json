@@ -1,0 +1,626 @@
+{
+  "mlkem512_ct": {
+    "frequency": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.4742840011105459
+    },
+    "block_frequency": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.48037616866310817
+    },
+    "runs": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5072714302988186
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.6339306385306251
+    },
+    "approx_entropy": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4877005714733278
+    },
+    "serial_p1": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5137335759424144
+    },
+    "serial_p2": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5006640315985046
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5017548050246308
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.498910809719326
+    },
+    "deviation_score": 0.0
+  },
+  "mlkem768_ct": {
+    "frequency": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5152135678961264
+    },
+    "block_frequency": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5061528611552518
+    },
+    "runs": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.4898951715289081
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5930656127538524
+    },
+    "approx_entropy": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4917950271215221
+    },
+    "serial_p1": {
+      "pass_rate": 0.98,
+      "mean_p": 0.5046874239702898
+    },
+    "serial_p2": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4803163930656416
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5124301372453295
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.49776121036122173
+    },
+    "deviation_score": 0.0
+  },
+  "mlkem1024_ct": {
+    "frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5011963603774684
+    },
+    "block_frequency": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5139628010425198
+    },
+    "runs": {
+      "pass_rate": 0.99,
+      "mean_p": 0.48418102408131536
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5794042492610512
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.49990916167227595
+    },
+    "serial_p1": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4931669396911364
+    },
+    "serial_p2": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5048304652671631
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.4804434797286071
+    },
+    "cusum_rev": {
+      "pass_rate": 0.99,
+      "mean_p": 0.505248416796253
+    },
+    "deviation_score": 0.0
+  },
+  "mldsa44_sig": {
+    "frequency": {
+      "pass_rate": 0.9133333333333333,
+      "mean_p": 0.3339658916337282
+    },
+    "block_frequency": {
+      "pass_rate": 0.17333333333333334,
+      "mean_p": 0.04544069494914326
+    },
+    "runs": {
+      "pass_rate": 0.94,
+      "mean_p": 0.35891729076010354
+    },
+    "longest_run": {
+      "pass_rate": 1.0,
+      "mean_p": 0.5753038530471529
+    },
+    "approx_entropy": {
+      "pass_rate": 0.42333333333333334,
+      "mean_p": 0.10433144509368064
+    },
+    "serial_p1": {
+      "pass_rate": 0.5,
+      "mean_p": 0.12910008940594905
+    },
+    "serial_p2": {
+      "pass_rate": 0.6533333333333333,
+      "mean_p": 0.1967134117466604
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9266666666666666,
+      "mean_p": 0.30400375828035436
+    },
+    "cusum_rev": {
+      "pass_rate": 0.88,
+      "mean_p": 0.20263505785651215
+    },
+    "deviation_score": 0.0
+  },
+  "mldsa65_sig": {
+    "frequency": {
+      "pass_rate": 0.94,
+      "mean_p": 0.40325177083925967
+    },
+    "block_frequency": {
+      "pass_rate": 0.57,
+      "mean_p": 0.1764435599381066
+    },
+    "runs": {
+      "pass_rate": 0.9533333333333334,
+      "mean_p": 0.41811307626704963
+    },
+    "longest_run": {
+      "pass_rate": 0.99,
+      "mean_p": 0.6153005334209553
+    },
+    "approx_entropy": {
+      "pass_rate": 0.5866666666666667,
+      "mean_p": 0.13779440561156325
+    },
+    "serial_p1": {
+      "pass_rate": 0.6966666666666667,
+      "mean_p": 0.18274810598886285
+    },
+    "serial_p2": {
+      "pass_rate": 0.8066666666666666,
+      "mean_p": 0.2420304349381624
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9566666666666667,
+      "mean_p": 0.3974869715342123
+    },
+    "cusum_rev": {
+      "pass_rate": 0.93,
+      "mean_p": 0.28036319338751964
+    },
+    "deviation_score": 0.0
+  },
+  "mldsa87_sig": {
+    "frequency": {
+      "pass_rate": 0.95,
+      "mean_p": 0.39735754112480265
+    },
+    "block_frequency": {
+      "pass_rate": 0.17666666666666667,
+      "mean_p": 0.035079548313946794
+    },
+    "runs": {
+      "pass_rate": 0.9633333333333334,
+      "mean_p": 0.41106620023996354
+    },
+    "longest_run": {
+      "pass_rate": 0.99,
+      "mean_p": 0.583272367956053
+    },
+    "approx_entropy": {
+      "pass_rate": 0.68,
+      "mean_p": 0.1812831533842561
+    },
+    "serial_p1": {
+      "pass_rate": 0.75,
+      "mean_p": 0.2223808597522693
+    },
+    "serial_p2": {
+      "pass_rate": 0.8433333333333334,
+      "mean_p": 0.28172183241673165
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9666666666666667,
+      "mean_p": 0.39650264886120823
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9533333333333334,
+      "mean_p": 0.31386479974241344
+    },
+    "deviation_score": 0.0
+  },
+  "slhdsa_128s": {
+    "frequency": {
+      "pass_rate": 0.98,
+      "mean_p": 0.49597631675105297
+    },
+    "block_frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5002695788953456
+    },
+    "runs": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.4651813011438833
+    },
+    "longest_run": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.6168309151608613
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5085140149439432
+    },
+    "serial_p1": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.508590750814469
+    },
+    "serial_p2": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5205825100021205
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5119748305961137
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5034367964694378
+    },
+    "deviation_score": 0.0
+  },
+  "slhdsa_128f": {
+    "frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5165482395490638
+    },
+    "block_frequency": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5178596030574215
+    },
+    "runs": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5078836434728641
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.6126962632354127
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5270352427829483
+    },
+    "serial_p1": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5056072604559531
+    },
+    "serial_p2": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4897221401969081
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5068287460653472
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5257037556841445
+    },
+    "deviation_score": 0.0
+  },
+  "slhdsa_192s": {
+    "frequency": {
+      "pass_rate": 1.0,
+      "mean_p": 0.5031509986206449
+    },
+    "block_frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.48638231204908655
+    },
+    "runs": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.4728300879962399
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5914931170573512
+    },
+    "approx_entropy": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4717403160026718
+    },
+    "serial_p1": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.48244582837284383
+    },
+    "serial_p2": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.508571311851716
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.4956903731236927
+    },
+    "cusum_rev": {
+      "pass_rate": 1.0,
+      "mean_p": 0.5205404665288895
+    },
+    "deviation_score": 0.0
+  },
+  "slhdsa_256s": {
+    "frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.47193649530783127
+    },
+    "block_frequency": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.4931054450983125
+    },
+    "runs": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5040076429955207
+    },
+    "longest_run": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5726414776935524
+    },
+    "approx_entropy": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4546415345091096
+    },
+    "serial_p1": {
+      "pass_rate": 0.9766666666666667,
+      "mean_p": 0.4575626433871404
+    },
+    "serial_p2": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.4588661826387765
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.46928087024563336
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.46515923455066194
+    },
+    "deviation_score": 0.0
+  },
+  "rsa2048_ct": {
+    "frequency": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4874699666673439
+    },
+    "block_frequency": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.46518913638606524
+    },
+    "runs": {
+      "pass_rate": 0.9666666666666667,
+      "mean_p": 0.4867933323750084
+    },
+    "longest_run": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.6320255652651662
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5215803996836739
+    },
+    "serial_p1": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5180790758695936
+    },
+    "serial_p2": {
+      "pass_rate": 1.0,
+      "mean_p": 0.522281627261833
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4799296689026137
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.474331146945933
+    },
+    "deviation_score": 0.0
+  },
+  "ecdsa_p256_sig": {
+    "frequency": {
+      "pass_rate": 0.86,
+      "mean_p": 0.2336449745663515
+    },
+    "block_frequency": {
+      "pass_rate": 0.82,
+      "mean_p": 0.1509489244249445
+    },
+    "runs": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4436760318509683
+    },
+    "longest_run": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5184670834968912
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9233333333333333,
+      "mean_p": 0.2997549273751333
+    },
+    "serial_p1": {
+      "pass_rate": 0.9333333333333333,
+      "mean_p": 0.31161734553603754
+    },
+    "serial_p2": {
+      "pass_rate": 0.9766666666666667,
+      "mean_p": 0.4119501201600438
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.81,
+      "mean_p": 0.15275217525995743
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9133333333333333,
+      "mean_p": 0.2742235919395144
+    },
+    "deviation_score": 0.0
+  },
+  "ed25519_sig": {
+    "frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5049434971425071
+    },
+    "block_frequency": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.49460672481764695
+    },
+    "runs": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.47551886101895985
+    },
+    "longest_run": {
+      "pass_rate": 1.0,
+      "mean_p": 0.604365859295481
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9766666666666667,
+      "mean_p": 0.4438228373045218
+    },
+    "serial_p1": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.48063934322429125
+    },
+    "serial_p2": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.4938235637695232
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5042306647535969
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.49688935204606594
+    },
+    "deviation_score": 0.0
+  },
+  "aes256gcm_ct_768": {
+    "frequency": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5178330661233759
+    },
+    "block_frequency": {
+      "pass_rate": 0.9733333333333334,
+      "mean_p": 0.5020813672110178
+    },
+    "runs": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.48502519302964475
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.6258795377036609
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.5023965010782592
+    },
+    "serial_p1": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5035411960113791
+    },
+    "serial_p2": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.4960656394896435
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5273796398821822
+    },
+    "cusum_rev": {
+      "pass_rate": 0.99,
+      "mean_p": 0.5303234229171817
+    },
+    "deviation_score": 0.0
+  },
+  "aes256gcm_ct_784": {
+    "frequency": {
+      "pass_rate": 0.98,
+      "mean_p": 0.499405191464323
+    },
+    "block_frequency": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5425960996861755
+    },
+    "runs": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5102610380082261
+    },
+    "longest_run": {
+      "pass_rate": 1.0,
+      "mean_p": 0.5900699069433648
+    },
+    "approx_entropy": {
+      "pass_rate": 0.99,
+      "mean_p": 0.4708808035177505
+    },
+    "serial_p1": {
+      "pass_rate": 0.99,
+      "mean_p": 0.486079515337779
+    },
+    "serial_p2": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5091654018165569
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.492255864453862
+    },
+    "cusum_rev": {
+      "pass_rate": 0.98,
+      "mean_p": 0.4969773575538832
+    },
+    "deviation_score": 0.0
+  },
+  "urandom_768": {
+    "frequency": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.4904027610871243
+    },
+    "block_frequency": {
+      "pass_rate": 0.9833333333333333,
+      "mean_p": 0.5147982264025409
+    },
+    "runs": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5151837681498034
+    },
+    "longest_run": {
+      "pass_rate": 0.9966666666666667,
+      "mean_p": 0.6428101918086206
+    },
+    "approx_entropy": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5305207921397836
+    },
+    "serial_p1": {
+      "pass_rate": 0.9933333333333333,
+      "mean_p": 0.5397907934069506
+    },
+    "serial_p2": {
+      "pass_rate": 1.0,
+      "mean_p": 0.527242088132453
+    },
+    "cusum_fwd": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.5199365402424931
+    },
+    "cusum_rev": {
+      "pass_rate": 0.9866666666666667,
+      "mean_p": 0.500812980913971
+    },
+    "deviation_score": 0.0
+  }
+}
