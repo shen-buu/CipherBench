@@ -6,6 +6,7 @@ CipherBench is a benchmark dataset for identifying the *algorithm* that produced
 
 > **Published**: Shen, J.; Liu, K.; Zhao, M.; Yue, Z.; Mao, J.; Li, X. *CipherBench: A Fine-Grained Benchmark Dataset for Algorithm-Level Fragmented Payload Identification*. Appl. Sci. **2026**, *16*(17), 8763. https://doi.org/10.3390/app16178763 — paper: https://www.mdpi.com/2076-3417/16/17/8763
 
+> **Availability**: this repository, its releases and its datasets are **fully public** --- no access restrictions during or after peer review. Code: MIT (`LICENSE`); dataset and results: CC BY 4.0 (`DATA_LICENSE.md`).
 ## Highlights
 
 - **50 classes · 7 categories · 50,000 samples** (1,000 per class), each a 1,024-byte random-offset window with zero padding.
