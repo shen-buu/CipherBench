@@ -1,4 +1,4 @@
-# CipherBench-PQC Audit Log (51 cases, shipped with the release)
+# CipherBench-PQC Audit Log (63 cases, shipped with the release)
 
 > Numbering: #1–#18 development-phase cases (reconstructed numbering, see note in the Chinese
 > master `audit_log.md`); #19–#26 keep the original numbering used in the internal records
@@ -185,16 +185,6 @@
   band (beyond sampling error) is exactly such a separator → contradiction.
 - Evidence: RESUME.md #26; §4.3 reduction sketch.
 
-## #28 Open-set v1 scoring asymmetry (caught by the null band, 2026-09-18)
-- Finding: the v1 E2 permutation-null AUROC was anomalous (MSP 0.93, entropy 0.99; should be ≈0.5).
-- Ruling: known objects were scored by their own fold's model while unknowns were scored by the
-  5-fold average; under label permutation this asymmetry alone created an ID/OOD gap (averaging
-  raises entropy, lowers max probability), contaminating the null. All v1 results were discarded.
-- Fix: v2 uses a single model with an 80/20 split (known 240/60 per class, all unknowns in test),
-  scoring both groups symmetrically; the null returned to the 0.5 regime. v1 JSON overwritten.
-- Lesson: any average-vs-single-model scoring asymmetry must pass the null-band test first.
-- Evidence: exp_open_set.py (v2); 复核报告 §二十三.
-
 ## #27 Replicate-count upgrade: S1 2→5 seeds, C_align 3→5 seeds, PQClean 5→10 realizations (internal review decision, 2026-09-19)
 - Finding: replicate counts below the E14 convention (S1: 2 seeds; C_align: 3 seeds; PQClean: 5 realizations).
 - Fix: all three upgraded and re-run with unchanged protocols (E8 per-seed window RNG preserved).
@@ -213,6 +203,16 @@
   #8 is kept as a historical record and the paper's Coincidence note was rewritten.
 - Evidence: results/s1_formal_summary.json (n=5), align_order.json (5-seed A2/A2_nt),
   b4_pqclean_leg.json (10 realizations).
+
+## #28 Open-set v1 scoring asymmetry (caught by the null band, 2026-09-18)
+- Finding: the v1 E2 permutation-null AUROC was anomalous (MSP 0.93, entropy 0.99; should be ≈0.5).
+- Ruling: known objects were scored by their own fold's model while unknowns were scored by the
+  5-fold average; under label permutation this asymmetry alone created an ID/OOD gap (averaging
+  raises entropy, lowers max probability), contaminating the null. All v1 results were discarded.
+- Fix: v2 uses a single model with an 80/20 split (known 240/60 per class, all unknowns in test),
+  scoring both groups symmetrically; the null returned to the 0.5 regime. v1 JSON overwritten.
+- Lesson: any average-vs-single-model scoring asymmetry must pass the null-band test first.
+- Evidence: exp_open_set.py (v2); 复核报告 §二十三.
 
 ## #29 Cross-implementation transfer set (internal review decision, 2026-09-19)
 - Original plan: generate the test set with oqs-provider + OpenSSL 3.5. Verified and corrected:
@@ -701,3 +701,176 @@
 - Added: LICENSE (MIT), data/LICENSE.md (CC BY 4.0), README.md.
 - Adjacent fix: the user's edited paper.tex branch had reverted the audit count to 48 (the log
   holds 50); synced to 50; rebuilt at 45 pages, 0 errors.
+
+## #52 Workflow handover: paper.tex becomes the single source (user decision, 2026-09-25)
+- The user reorganized paper.tex/supplementary.tex and completed both Zenodo DOIs
+  (dataset 22950765, CC BY 4.0; code snapshot 22952070, MIT), and delegated all further
+  management to the assistant.
+- New workflow: paper.tex is the single source of truth; build_tail.py is deprecated
+  (aborts immediately to prevent accidental runs); paper_manuscript_en.md is marked
+  deprecated (archive only); verify_paper_consistency.py is the new guard (audit count /
+  bibliography closure / submission-file counts; read-only).
+- Handover acceptance: 42 pages, 0 errors, 0 undefined; 50 bib entries all cited, 0 orphans;
+  both Zenodo records verified via API (title/creators/license/date).
+
+## #53 Figure handover: the seven figures redrawn externally (user decision, 2026-09-25)
+- The user had an external designer redraw the seven in-paper figures and copy them back into
+  figures/ (fig1-7 replaced; the graphical abstract untouched).
+- Handover checks: all vector with embedded fonts (fig4/fig5 contain heatmap raster blocks,
+  which is normal); filenames match the tex references; textually checkable numbers match the
+  frozen values (fig1 z=17/70/500/616/467; fig7 tree baselines RF 0.281/0.290, HGB 0.413/0.424,
+  chance 1/34=0.029; fig2 groups and 11 cells present); curve values are vector paths and, per
+  the agreement, results/ JSONs remain the only numeric source of truth (the redrawn figures are
+  exempt from the figs_qa text checks).
+- make_all_figs.py is deprecated with an abort guard (protects the redrawn PDFs); figs_qa.py no
+  longer auto-redraws.
+- Acceptance: recompiled with 0 errors; verify_paper_consistency ALL PASS.
+
+## #54 Two key citations added (raised by the user, 2026-09-25)
+- (1) PQClean citation missing: mentioned 4x in the body plus 3x in caption/table as a key
+  control but absent from the bibliography — added @misc{pqclean} (Kannwischer/Rijneveld/
+  Schwabe/Stebila/Wiggers + contributors, the project's canonical attribution, 2019), cited at
+  the first body mention (§5.2 PQClean leg); the abstract stays citation-free (convention).
+- (2) Missing closely-related work: Mallick et al., "Classifying Implementations of
+  Cryptographic Primitives and Protocols that Use Post-Quantum Algorithms" (arXiv:2503.17830
+  v4, 2025) — added @misc{mallick2025classifying}, with a two-sentence distinction after the
+  PQClass sentence in Related Work: implementation behavior vs. representation level, detection
+  accuracy vs. per-channel null-band bounds, complete protocol flows vs. carving/encryption/
+  telemetry-constrained objects.
+- Acceptance: 52 bib entries all cited, 0 orphans, 0 undefined; 42 pages, 0 errors; guard
+  ALL PASS.
+
+## #55 Three lineage citations added (raised by the user, 2026-09-25)
+- (1) Shamir & van Someren 1999 (FC/LNCS 1648, pp. 118-124, DOI 10.1007/3-540-48390-X_9):
+  a lineage sentence in the §2 carving paragraph (stored-key search → our S1 as its
+  representation-level descendant).
+- (2) Liberatore & Levine 2006 (CCS, pp. 255-263, DOI 10.1145/1180405.1180437 — note: the
+  initially proposed DOI 1180417 was caught by Crossref as a different paper (Curtmola et al.)
+  and corrected): a website-fingerprinting lineage sentence in the §2 traffic paragraph
+  (packet-length statistics leak page identity; the privacy semantics of our S2 length channel
+  inherit from that line).
+- (3) Dyer et al. 2012 (S&P, pp. 332-346, DOI 10.1109/SP.2012.28): a sentence in the §6
+  padding subsection (efficient padding defenses similarly fail to remove length information).
+- All metadata Crossref-verified; zero experimental changes.
+- Acceptance: 55 bib entries all cited, 0 orphans, 0 undefined; 43 pages, 0 errors; guard
+  ALL PASS.
+
+## #56 Weakened the inductive-bias claim + architecture choice explained (user, 2026-09-25)
+- The user noted that §2's "first controlled evidence that ... inductive-bias-dependent" was
+  over-strong: scalar BiLSTM failure on near-uniform long sequences is unsurprising, and the
+  predecessor used 5 baselines including a Byte Transformer while this paper tests only
+  CNN/BiLSTM — reviewers will ask about the architecture choice. Minimal path adopted
+  (weaken + explain; no new experiments).
+- Three edits: (1) §2 claim scoped: "…first controlled evidence, for cryptographic payloads,
+  that the two depth architectures we test — a local-pattern CNN and a scalar-input BiLSTM —
+  diverge at a frozen budget; … within the tested pair, not a claim over the architecture
+  space." (2) §5.5 explains the choice (CNN = standard raw-byte baseline; BiLSTM =
+  long-sequence recurrent control; the predecessor's Byte Transformer \cite{CipherBench} is
+  outside the frozen grid — a deliberate scope decision). (3) Limitations gains: the deep
+  architecture set is fixed by the frozen protocol; whether other families recover signal is
+  left open.
+- The stronger path (adding a Transformer tier: new GPU rental + new frozen tier) is recorded
+  as a contingency for reviewer requests.
+- Acceptance: 44 pages, 0 errors, 0 undefined; guard ALL PASS.
+
+## #57 Full E1–E14 catalogue moved into the supplement (user, 2026-09-25)
+- The user noted §4.5 only said the catalogue "ships with the release" (reviewers cannot see
+  it) and located the frozen original (v2.4 experiment norms) in pqc_wave2.
+- Cross-check: 11/14 items match current practice exactly; 4 partially matching items were
+  reworded (E1 sweep → block-size grid {512,1024,4096}; E4 independence → held-out transfer
+  set; E5 corpus-level holdout → transfer-set wording; E6 accuracy → macro-F1 primary plus
+  group-fold; E10 short/long grouped reporting dropped), and two internal wave2 case-number
+  references (#12/#13) were removed.
+- Placement (user chose B): supplementary.tex gains section S-0 with the full 14-item list
+  (enumerate); §4.5 now reads "The full E1–E14 catalogue appears in Supplement S-0".
+- Acceptance: supplementary.pdf 3 pages, paper 44 pages, both 0 errors; S-0 renders with all
+  14 items, no internal case references, and the §4.5 pointer in place.
+
+## #58 AI-use declaration added (user-provided wording, 2026-09-25)
+- Per Elsevier policy, a new section before References declares generative AI assistance:
+  "Declaration of generative AI and AI-assisted technologies in the manuscript preparation
+  process" (DeepSeek-V4-Pro for Chinese-to-English translation and LaTeX typesetting; the
+  authors reviewed and take full responsibility). Wording as provided by the user.
+- Acceptance: 44 pages, 0 errors, 0 undefined; the declaration renders.
+
+## #59 Funding statement updated (user-provided, 2026-09-25)
+- The user supplied the funding information: Academic Degrees and Graduate Education
+  Development Center, MOE, grant ZT-2511417005 (project "ZhiTu WangAn: Intelligent
+  Penetration Testing System Driven by Large Language Models and Knowledge Graphs for
+  Cybersecurity").
+- Disposition: the old no-funding Funding section was removed and the new Funding section
+  placed immediately before the AI-use declaration (before References), as requested; the
+  project title is set with LaTeX double quotes; submission_checklist B4 synced.
+- Acceptance: 44 pages, 0 errors, 0 undefined; the grant number and project name render and
+  the old no-funding sentence is gone.
+
+## #60 Three typesetting fixes (2026-09-25, user-specified: markup/notation only, no values/content)
+- Table 3 (Wild set): unbreakable long strings in narrow p{} columns overflowed and caused three
+  overlaps (OID string vs. intact/OID-erased; domain vs. 1404 B; P = 0.18–0.28 vs. OID).
+  Disposition: \allowbreak breakpoints inside the OIDs (2.16.840.1.101.3.4.3.19,
+  1.2.840.113549.1.1.5) and the domain (vpn.dilithiumnetworks.com); column widths set to
+  0.18/0.10/0.07/0.16/0.24/0.15 (sum 0.90). Acceptance: all strings present in the compiled PDF,
+  pairwise text-span bbox overlap check = NONE.
+- Figure 6 (λ ladder): x tick labels 0.0625 and 0.125 overlapped. Disposition: the 0.0625 tick was
+  dropped (ticks now 0/0.125/0.25/0.5/1.0 plus the unlabeled wide-band offsets 1.06/1.12); new
+  script figures/make_fig6.py (frozen ladder data via figs_data.get_ladder, assertions pass).
+  Acceptance: PDF contains 0.125, no 0.0625, no overlaps.
+- Figure 5 (length fold): the 489.6 pt figure was downscaled by width=\linewidth (390 pt) so its
+  5.2 pt labels printed at ~4.3 pt. Disposition: figure resized to 390×344 pt (full text width),
+  tick labels raised 4.2→7 pt; new script figures/make_fig5.py (row-normalized frozen
+  nn_len_seed42.json matrix, pointwise identical). Acceptance: labels measure 6.91 pt ≥ 6 pt in
+  the compiled PDF; vector output (fonttype 42). Caption unchanged and consistent with the figure.
+- Table 4 (capability–leakage map):
+  (a) "G=16/64" in C_struct×S3 (rounding step) collided with G = equivalence-class count in
+      §5.3/Fig. 1 → renamed to "∆=16/64"; full-text search confirms G=16/64 is gone (the
+      §5.3/Fig. 1 G is untouched).
+  (b) C_bytes×S1 "z ≤ 1.1 / ≤ 5.9" labeled → "(trunc50 z ≤ 1.1; slide50 z ≤ 5.9)" (matches §5.8).
+  (c) Cells reflowed into short semantic lines with \newline; long value chains (0.548/0.383/0.314
+      etc.) got \allowbreak after each slash. Acceptance: all values/labels in place, no overlaps,
+      G=16/64 cleared.
+- Markup/notation only; no frozen number changed. 44 pages, 0 errors, 0 undefined.
+
+## #61 Second external redraw of all seven figures (2026-09-26; GA untouched)
+- All seven figure PDFs (fig1–fig7) replaced in place under the same filenames; the graphical
+  abstract remains the make_ga.py output (60-case banner intact).
+- Recompile acceptance: 43 pages (smaller figures), 0 errors, 0 undefined; Table 3/4 overlap
+  checks still NONE.
+- Per-figure programmatic QA against frozen anchors:
+  · fig1 z annotations 17/70/500/616/467 = frozen ✓; fig7 RF 0.281 / HGB 0.290 = 0.2808/0.2903 ✓;
+    fig4 ordering (four signature classes first) ✓; fig6 ticks 0/0.0625/0.125/0.25/0.5/1.0 spaced
+    >= 26 pt, no overlap ✓; fig5 labels 6.5 pt x 390/388.8 ≈ 6.52 pt ≥ 6 pt ✓; fig2 "n=5 seeds"
+    matches the frozen JSON (n=5) — the old figure's n=2 label was stale and is now corrected ✓.
+- Open items (designer-side, awaiting the user's decision):
+  (1) fig5: the leading 'a' of the two x-axis labels aes256gcm_ct_768/784 is clipped (label top
+      357.5 pt > page 356.4 pt) — they render as es256gcm_ct_768/784;
+  (2) fig5 has no axis titles (the previous version carried 'predicted (classes ordered by
+      length)' / 'true');
+  (3) all seven figures embed Type3 fonts (DejaVuSans, default fonttype 3) — Elsevier production
+      is sensitive to Type3; recommend re-exporting with pdf.fonttype=42; fig6's x-axis label is
+      missing the λ symbol ('signal density (class-token …)').
+- Local fallbacks available: figures/make_fig5.py and make_fig6.py (frozen data, verified,
+  with axis titles and λ) — adoption at the user's discretion.
+
+## #62 Third external redraw of all seven figures (2026-09-26): all #61 items fixed, accepted
+- The seven figure PDFs were replaced (08:47). All open items from #61 are cleared:
+  (1) fig5's clipped leading 'a' is fixed (aes256gcm_ct_768/784 render in full, no label overflow);
+  (2) fig5 axis titles restored (predicted (classes ordered by length) / true, 8 pt);
+  (3) fonts upgraded Type3 -> Type0 (DejaVuSans subsets); fig6's x-axis λ restored.
+- Per-figure QA against frozen anchors: fig1 z=17/70/500/616/467 ✓; fig2 n=5 seeds ✓ (matches the
+  frozen JSON n=5); fig4 four-signature-class ordering ✓; fig5 labels 6.5 pt × 390/388.8 ≈ 6.52 pt
+  ≥ 6 pt, axis titles in place, aes labels complete ✓; fig6 λ in place, ticks 0/0.0625/0.125/0.25/
+  0.5/1.0 spaced ≥ 26 pt (no overlap), wide-band markers present ✓; fig7 RF 0.281 / HGB 0.290 /
+  chance 0.029 ✓.
+- Recompile: 43 pages, 0 errors, 0 undefined; Table 3/4 overlap checks NONE; guard ALL PASS.
+- Note: figures/make_fig5.py, make_fig6.py and make_all_figs.py are historical scripts; the current
+  seven figures are the designer's hand-managed files (do not run the scripts over them).
+
+## #63 Historical figure-script cleanup (2026-09-26)
+- Removed the obsolete figure toolchain from figures/: make_all_figs.py (retired guard version),
+  make_fig5.py, make_fig6.py, figs_data.py, figs_qa.py, figstyle.py, gen_tables.py and
+  __pycache__; also removed the recovery artifacts under /home/shen/tools/ (pycdc,
+  make_all_figs_recovered.py).
+- Kept: figures/make_ga.py (GA generator, still required by the consistency guard and the count
+  chain); the seven figure PDFs and QA_交付报告.md. The seven PNG previews were re-exported from
+  the final PDFs at 300 dpi so they match the shipped vectors.
+- Acceptance: GA regenerates, verify_paper_consistency ALL PASS, paper recompiles with 0 errors.

@@ -1,4 +1,4 @@
-# CipherBench-PQC 审计日志（51 案例，公开随稿发布）
+# CipherBench-PQC 审计日志（63 案例，公开随稿发布）
 
 > 编号说明：#1–#18 为开发期案例，编号按本日志重建（本地落盘记录最早见于 #19）；
 > #19–#26 沿用既有编号（RESUME.md / host_verification.md / QA_交付报告.md）。
@@ -163,15 +163,6 @@
   ③超零带分类器即类间区分器 → 矛盾。
 - 证据：RESUME.md #26；§4.3 归约草图。
 
-## #28 开集实验 v1 的打分不对称（零带抓出，2026-09-18）
-- 现象：开集拒绝实验 v1 的 E2 置换零带 AUROC 异常（MSP 0.93、熵 0.99，应 ≈0.5）。
-- 裁定：known 对象由"本折模型"打分、unknown 由"5 折平均"打分——置换标签下这个
-  打分不对称本身制造 ID/OOD 差异（平均化使熵升、最大概率降），零带被污染，v1 全部作废。
-- 处置：v2 改单模型 80/20 对称打分（known 240/60 划分、unknown 全入测试、同一模型打分），
-  零带回归 0.5 语义附近；v1 JSON 由 v2 覆盖。
-- 教训：任何"平均 vs 单模型"的打分不对称必须先过零带检验。
-- 证据：exp_open_set.py（v2）；复核报告 §二十三。
-
 ## #27 重复次数升级：S1 2→5 seeds、C_align 3→5 seeds、PQClean 5→10 realizations（内部审核会决议，2026-09-19）
 - 现象：§5.4/§5.6/PQClean 腿的重复数低于 E14 惯例（S1 仅 2 seeds、C_align 3 seeds、
   PQClean 5 realizations），误差棒偏薄。
@@ -193,6 +184,15 @@
   图脚本 HOST 路径由 /mnt/hgfs 改为本地 results/（共享挂载已掉）。
 - 证据：results/s1_formal_summary.json（n=5）、align_order.json（A2/A2_nt 5 seeds）、
   b4_pqclean_leg.json（10 realizations）。
+
+## #28 开集实验 v1 的打分不对称（零带抓出，2026-09-18）
+- 现象：开集拒绝实验 v1 的 E2 置换零带 AUROC 异常（MSP 0.93、熵 0.99，应 ≈0.5）。
+- 裁定：known 对象由"本折模型"打分、unknown 由"5 折平均"打分——置换标签下这个
+  打分不对称本身制造 ID/OOD 差异（平均化使熵升、最大概率降），零带被污染，v1 全部作废。
+- 处置：v2 改单模型 80/20 对称打分（known 240/60 划分、unknown 全入测试、同一模型打分），
+  零带回归 0.5 语义附近；v1 JSON 由 v2 覆盖。
+- 教训：任何"平均 vs 单模型"的打分不对称必须先过零带检验。
+- 证据：exp_open_set.py（v2）；复核报告 §二十三。
 
 ## #29 跨实现迁移测试集（内部审核会决议，2026-09-19）
 - 原案：oqs-provider + OpenSSL 3.5 生成测试集。查证后修正：训练容器本身就是
@@ -253,7 +253,7 @@
 - 落文：§4.1 S2 限定句、§5.3 末 Real-encapsulation validation 段、Table 4 C_len×S2 格补行。
 - 证据：results/tls_records_formal.json（env：OpenSSL 3.5.3、record policy、会话方式）。
 
-## #33 Epoch 预算网格 15/30/60（内部审核会决议，2026-09-19，GPU 待跑）
+## #33 Epoch 预算网格 15/30/60（内部审核会决议，2026-09-19；2026-09-20 租机 V100 完成）
 - 设计：CNN/BiLSTM × {15,30,60} × {p1,p2} × 5 seeds = 12 组 60 运行；15/30 的 40 个
   逐种子文件已在 rental_snapshot/pqc/results/（冻结聚合已核）；新增 60ep 20 个 +
   复现界验证（CNN 重跑比对 ≤0.026、BiLSTM exact）。
@@ -262,7 +262,7 @@
 - 落文计划：Figure 7（预算曲线 + rf/hgb 水平参考线）；§5.5 "2×-epoch ablation" →
   "budget grid (15/30/60)"；若 CNN 60ep 续升或 BiLSTM 复苏如实报告。
 
-## #33（续）预算网格 15/30/60 结果（2026-09-20，GPU 租机 V100 完成）
+
 - 60ep 20 运行 + verify 2 运行全部完成（torch 2.5.1+cu124，Tesla V100-16GB）。
 - 网格（5 seeds，E14）：CNN P1 0.2075±0.0083 → 0.2832±0.0066 → **0.3181±0.0045**；
   CNN P2 0.3415±0.0237 → 0.4590±0.0142 → **0.4999±0.0046**（单调上升，60ep 双协议超树基线）；
@@ -608,3 +608,141 @@
 - 新增：LICENSE（MIT）、data/LICENSE.md（CC BY 4.0）、README.md。
 - 顺带修复：用户编辑的 paper.tex 分支把审计计数回退为 48（日志实为 50），已同步 50；
   重建后 45 页 0 错误。
+
+## #52 工作流移交：paper.tex 成为唯一源（用户决议，2026-09-25）
+- 用户重组 paper.tex/supplementary.tex 并完成双 Zenodo DOI（数据集 22950765 CC BY 4.0、
+  代码快照 22952070 MIT），宣布此后全部由助手管理、不再亲自接管。
+- 新工作流：paper.tex = 稿件唯一源；build_tail.py 退役（改为直接中止防误跑）；
+  paper_manuscript_en.md 标注 deprecated 仅存档；verify_paper_consistency.py 成为新防线
+  （审计计数/文献闭环/提交文件计数，只检查不改文件）。
+- 接管验收：42 页 0 错误 0 undefined；bib 50 条全引 0 orphan；两个 Zenodo 记录经 API
+  验证（标题/作者/许可/日期）。
+
+## #53 图件移交：七图外部重绘（用户决议，2026-09-25）
+- 用户请外部设计师重绘 7 张正文图并拷回 figures/（fig1-7 替换；GA 未动）。
+- 接管检查：全部矢量字体嵌入（fig4/fig5 含热图栅格块属正常）；文件名与 tex 引用一致；
+  文本可核对数字与冻结一致（fig1 z=17/70/500/616/467；fig7 树基线 RF 0.281/0.290、
+  HGB 0.413/0.424、chance 1/34=0.029；fig2 分组与 11 格齐全）；曲线数值为矢量路径，
+  按约定以 results/ JSON 为唯一数值源（新图豁免 figs_qa 文本校验）。
+- make_all_figs.py 退役加中止保护（防覆盖外部重绘图）；figs_qa.py 不再自动重绘。
+- 验收：重编译 0 错误；verify_paper_consistency ALL PASS。
+
+## #54 补两条关键引用（用户提出，2026-09-25）
+- ①PQClean 引用缺失：正文 4 次 + 图注/表 3 次提及但 bib 无条目（关键对照实验）——补
+  @misc{pqclean}（Kannwischer/Rijneveld/Schwabe/Stebila/Wiggers + contributors，GitHub 项目
+  规范署名，2019），首次正文提及（§5.2 PQClean leg）挂 \cite；摘要不引（惯例）。
+- ②缺失重要相关工作：Mallick et al., "Classifying Implementations of Cryptographic
+  Primitives and Protocols that Use Post-Quantum Algorithms"（arXiv:2503.17830 v4，2025）——
+  补 @misc{mallick2025classifying}，Related Work 在 PQClass 句后加两句区分：
+  实现行为 vs 表示层、检测准确率 vs 逐信道零带界、完整协议流 vs 雕刻/加密/遥测受限场景。
+- 验收：bib 52 条全引 0 orphan、0 undefined；42 页 0 错误；防线 ALL PASS。
+
+## #55 补三条脉络引用（用户提出，2026-09-25）
+- ①Shamir & van Someren 1999（FC/LNCS 1648, pp.118-124, DOI 10.1007/3-540-48390-X_9）：
+  §2 雕刻段新增继承句（stored-key search → S1 表示层后裔）。
+- ②Liberatore & Levine 2006（CCS, pp.255-263, DOI 10.1145/1180405.1180437——注意：初拟
+  DOI 1180417 经 Crossref 核出是 Curtmola 另一篇，已纠正）：§2 流量段新增 website
+  fingerprinting 继承句（包长统计→页面身份，S2 长度信道隐私语义的脉络）。
+- ③Dyer et al. 2012（S&P, pp.332-346, DOI 10.1109/SP.2012.28）：§6 填充小节呼应句
+  （高效填充防御同样无法移除长度信息，与格点填充结论对话）。
+- 全部元数据经 Crossref 核实；零实验改动。
+- 验收：bib 55 条全引 0 orphan、0 undefined；43 页 0 错误；防线 ALL PASS。
+
+## #56 弱化归纳偏置声明 + 交代架构选择（用户提出，2026-09-25）
+- 用户指出：§2 "first controlled evidence that ... inductive-bias-dependent" 过强——
+  标量 BiLSTM 在近均匀长序列上失败不意外；前作 5 基线含 Byte Transformer，本文仅
+  CNN/BiLSTM，审稿人必问架构选择。采纳最小路径（弱化+交代，不补实验）。
+- 三处落文：
+  ① §2 声明限定："...first controlled evidence, for cryptographic payloads, that the two
+  depth architectures we test --- a local-pattern CNN and a scalar-input BiLSTM --- diverge at
+  a frozen budget; ... within the tested pair, not a claim over the architecture space."
+  ② §5.5 补架构选择说明（CNN=标准原始字节基线 + BiLSTM=长序列递归对照；Byte
+  Transformer 在前作 \cite{CipherBench}，不在本冻结网格——deliberate scope decision）。
+  ③ Limitations 增补：深架构集由冻结协议固定（RF/HGB/CNN/BiLSTM），其他族是否恢复信号
+  留待后续。
+- 备选强路径（补 Transformer 实验：需重租 GPU + 新冻结档）已记录，留作审稿回应预案。
+- 验收：44 页 0 错误 0 undefined；防线 ALL PASS。
+
+## #57 E1–E14 全文进补充材料（用户提出，2026-09-25）
+- 用户指出：§4.5 只说"catalogue ships with the release"，审稿人看不到 14 条全文；
+  并在 pqc_wave2 找到冻结版原文（v2.4 实验规范）。
+- 核对：14 条中 11 条与现论文完全一致，4 条部分一致（已对齐措辞：E1 扫描→块尺寸网格
+  {512,1024,4096}；E4 独立性→迁移集留出；E5 语料级留出→迁移集表述；E6 accuracy→
+  macro-F1 为主+组级折叠；E10 短/长分组删除），2 处 wave2 内部案例号（#12/#13）已删。
+- 落点（用户选 B）：supplementary.tex 新增 S-0 节全文 14 条（enumerate 格式）；
+  §4.5 改为 "The full E1–E14 catalogue appears in Supplement S-0"。
+- 验收：supplementary.pdf 3 页、paper 44 页，均 0 错误；S-0 渲染抽验 14 条全在、
+  无内部案例号残留、§4.5 指针落位。
+
+## #58 文末 AI 使用声明（用户提供措辞，2026-09-25）
+- 按 Elsevier 政策在 References 之前新增一节 "Declaration of generative AI and AI-assisted
+  technologies in the manuscript preparation process"，措辞采用用户原文（DeepSeek-V4-Pro：
+  中英翻译与 LaTeX 排版协助；作者审校并对内容负全责）。
+- 验收：44 页 0 错误 0 undefined；声明渲染抽验通过。
+
+## #59 Funding 声明更新（用户提供，2026-09-25）
+- 用户提供资助信息：Academic Degrees and Graduate Education Development Center, MOE
+  （grant ZT-2511417005，项目 ZhiTu WangAn: Intelligent Penetration Testing System...）。
+- 处置：删除旧"无特定资助"Funding 节，新 Funding 节按用户要求置于 AI 使用声明之前
+  （References 之前）；项目名用 LaTeX 双引号排版；submission_checklist B4 同步。
+- 验收：44 页 0 错误 0 undefined；grant 号与项目名渲染、旧无资助句清零。
+
+## #60 三处排版修复（2026-09-25，用户指定：只改排版与记号，不动数值/内容）
+- Table 3（Wild set）：窄 p{} 列中不可断长串溢出导致三处文字重叠（OID 串撞 intact/OID-erased、
+  域名撞 1404 B、P=0.18–0.28 撞 OID）。处置：OID（2.16.840.1.101.3.4.3.19、
+  1.2.840.113549.1.1.5）与域名（vpn.dilithiumnetworks.com）逐段插入 \allowbreak 断点；
+  列宽改 0.18/0.10/0.07/0.16/0.24/0.15（总和 0.90）。验收：PDF 程序化检测——长串全部在位、
+  表区文本 span 两两 bbox 无重叠（NONE）。
+- Figure 6（λ 梯子）：x 刻度 0.0625 与 0.125 标签重叠。处置：删 0.0625 刻度，保留
+  0/0.125/0.25/0.5/1.0 + 宽频带 1.06/1.12（无标签）；新脚本 figures/make_fig6.py
+  （冻结数据 figs_data.get_ladder，断言全过）。验收：PDF 含 0.125、无 0.0625、无重叠。
+- Figure 5（长度折叠矩阵）：图幅 489.6pt 经 width=\linewidth(390pt) 缩至 0.97×，标签仅 ~4.3pt。
+  处置：图幅改 390×344pt（整行宽），刻度字号 4.2→7pt；新脚本 figures/make_fig5.py
+  （冻结 nn_len_seed42.json 行归一化矩阵逐点一致）。验收：编译后 PDF 实测标签 6.91pt ≥ 6pt，
+  矢量 PDF 输出（fonttype 42）。图题未动，与新图一致。
+- Table 4（capability–leakage map）：
+  (a) C_struct×S3 的 "G=16/64"（舍入步长）与 §5.3/Fig 1 的 G（长度等价类个数）撞符号
+      → 改为 "∆=16/64"，全文搜索确认 G=16/64 清零（§5.3/Fig 1 的 G 保留不动）。
+  (b) C_bytes×S1 "z ≤ 1.1 / ≤ 5.9" 补标注 → "(trunc50 z ≤ 1.1; slide50 z ≤ 5.9)"（与 §5.8 一致）。
+  (c) 各单元格按语义短句 \newline 分行；长数值串（0.548/0.383/0.314 等）斜杠后加 \allowbreak。
+      验收：∆/标签/数值全部在位，表区无重叠，G=16/64 清零。
+- 全部改动仅排版与记号；任何冻结数值未动。编译 44 页 0 错误 0 undefined。
+
+## #61 七图二次重绘交付（2026-09-26，外部设计师重绘替换全部 7 图 PDF；GA 未动）
+- 新文件同文件名替换（fig1–fig7 .pdf，23:40 交付）；GA（graphical_abstract.pdf）仍为 make_ga.py
+  脚本产物、未被替换，banner 60-case 在位。
+- 重编译验收：43 页（新图更小，少 1 页）、0 错误 0 undefined；Table 3/4 重叠检测仍 NONE。
+- QA 逐图程序化核验（与冻结数据/文字锚点比对）：
+  · fig1 z 标注 17/70/500/616/467 = 冻结值 ✓；fig7 RF 0.281/HGB 0.290 = 0.2808/0.2903 ✓；
+    fig4 排序（4 签名类在前）✓；fig6 刻度 0/0.0625/0.125/0.25/0.5/1.0 间距 ≥26pt 无重叠 ✓；
+    fig5 标签 6.5pt×390/388.8 ≈ 6.52pt ≥ 6pt ✓；fig2 标注 n=5 seeds 与冻结 JSON（n=5）一致
+    （旧图 n=2 系过期标注，本次修正 ✓）。
+- 待处理项（设计师侧，已记录待用户裁决）：
+  (1) fig5 两个 x 轴标签 aes256gcm_ct_768/784 首字符 'a' 被裁掉（标签顶 357.5pt > 页面 356.4pt，
+      tight-crop 切边）→ 现渲染为 es256gcm_ct_768/784；
+  (2) fig5 无坐标轴标题（旧版有 'predicted (classes ordered by length)' / 'true'）；
+  (3) 全部 7 图为 Type3 字体（DejaVuSans，fonttype 默认 3）——Elsevier 生产流程对 Type3 敏感，
+      建议 fonttype=42 重导出；fig6 x 轴标签缺 λ 符号（现为 'signal density (class-token…)'）。
+- 本地方案备选：fig5 可用 figures/make_fig5.py（冻结数据、已验证、含轴题）重建；
+  fig6 同理 make_fig6.py（无 0.0625 重叠、含 λ）。是否采用由用户裁决。
+
+## #62 七图第三次重绘交付（2026-09-26，全部修复 #61 三项遗留，验收通过）
+- 新 7 图 PDF 覆盖原文件（08:47 交付）。#61 遗留全部清零：
+  (1) fig5 'a' 裁切已修复（aes256gcm_ct_768/784 完整渲染，标签顶不再越界）；
+  (2) fig5 轴题已恢复（predicted (classes ordered by length) / true，8pt）；
+  (3) 字体 Type3 → Type0（DejaVuSans 子集嵌入）；fig6 x 轴 λ 已恢复。
+- 逐图 QA（冻结锚点）：fig1 z=17/70/500/616/467 ✓；fig2 n=5 seeds ✓（与冻结 JSON n=5 一致）；
+  fig4 4 签名类排序 ✓；fig5 标签 6.5pt×390/388.8≈6.52pt≥6pt、轴题在位、aes 完整 ✓；
+  fig6 λ 在位、0/0.0625/0.125/0.25/0.5/1.0 相邻间距≥26pt 无重叠、宽频带标记在位 ✓；
+  fig7 RF 0.281/HGB 0.290/chance 0.029 ✓。
+- 重编译：43 页、0 错误 0 undefined；Table 3/4 重叠检测 NONE；verify 全过。
+- 说明：figures/make_fig5.py、make_fig6.py 与 make_all_figs.py 均为历史脚本，现行 7 图以
+  设计师交付文件为准（手管文件，勿运行覆盖）。
+
+## #63 历史画图脚本清理（2026-09-26）
+- 删除 figures/ 下全部历史画图工具链：make_all_figs.py（退役中止版）、make_fig5.py、
+  make_fig6.py、figs_data.py、figs_qa.py、figstyle.py、gen_tables.py 及 __pycache__；
+  同时清理 /home/shen/tools/ 下的反编译恢复件（pycdc、make_all_figs_recovered.py）。
+- 保留：figures/make_ga.py（GA 生成器，verify 守卫与计数链仍依赖）；7 图 PDF 及
+  QA_交付报告.md。7 张 PNG 预览已从定稿 PDF 重新导出（300dpi），与 PDF 一致。
+- 验收：GA 可再生成、verify_paper_consistency ALL PASS、paper 重编译 0 错误。
